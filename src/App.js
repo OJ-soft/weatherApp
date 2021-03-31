@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import keys from "./keys";
+
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+
+import Day from "./day"
+import Now from "./Now"
+import Mday from "./mday"
+import Landing from "./Landing"
+
+const api = {
+  key: keys.API_KEY,
+  base: keys.BASE_URL,
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <body>
+      
+      <Switch>
+        <Route path="/Landing" component={Landing}/>
+        <Route path="/day" component={Day} />
+        <Route path="/Now" component={Now} />
+        <Route path="/mday" component={Mday} />
+      </Switch>
+      
+      <div class="footer">
+        <h3>Literaly <b>PERFECT</b> website</h3>
+      </div>
+    </body>
+  </Router>
   );
 }
 
