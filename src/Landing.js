@@ -6,7 +6,7 @@ export default function Landing() {
   return(
     <div>
       <div class="landing">
-        <h4>We desperately/desperatly need a landing page</h4>
+        <h4>We desperately need a landing page</h4>
       </div>
       <navbar>
         <ul class="navbar">

@@ -19,6 +19,7 @@ function App() {
       <body>
       
       <Switch>
+        <Route exact path="/" component={Landing}/>
         <Route path="/Landing" component={Landing}/>
         <Route path="/day" component={Day} />
         <Route path="/Now" component={Now} />
@@ -26,7 +27,7 @@ function App() {
       </Switch>
       
       <div class="footer">
-        <h3>Literaly <b>PERFECT</b> website</h3>
+        <h3>Literally <b>PERFECT</b> website</h3>
       </div>
     </body>
   </Router>

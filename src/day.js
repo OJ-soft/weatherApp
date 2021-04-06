@@ -18,7 +18,7 @@ const Time = (a) => {
   h = h + a 
   if(h > 24){
     h = h - 24
-    h = "tomorow " + h
+    h = "tomorrow " + h
   }
   return h;
 };

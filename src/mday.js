@@ -121,7 +121,7 @@ function Mday() {
         <div className="temperature-plot"><Plot
           data={[
             trace1= {
-              x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
+              x: Array.from({length: 40}, (_, i) => i + 1),
               y: [Math.round(weather[0].main.temp), Math.round(weather[1].main.temp), Math.round(weather[2].main.temp), Math.round(weather[3].main.temp), Math.round(weather[4].main.temp), Math.round(weather[5].main.temp), Math.round(weather[6].main.temp), Math.round(weather[7].main.temp), Math.round(weather[8].main.temp), Math.round(weather[9].main.temp), Math.round(weather[10].main.temp), Math.round(weather[11].main.temp), Math.round(weather[12].main.temp), Math.round(weather[13].main.temp), Math.round(weather[14].main.temp), Math.round(weather[15].main.temp), Math.round(weather[16].main.temp), Math.round(weather[17].main.temp), Math.round(weather[18].main.temp), Math.round(weather[19].main.temp), Math.round(weather[20].main.temp), Math.round(weather[21].main.temp), Math.round(weather[22].main.temp), Math.round(weather[23].main.temp), Math.round(weather[25].main.temp), Math.round(weather[26].main.temp), Math.round(weather[27].main.temp), Math.round(weather[28].main.temp), Math.round(weather[29].main.temp), Math.round(weather[30].main.temp), Math.round(weather[31].main.temp), Math.round(weather[32].main.temp), Math.round(weather[33].main.temp), Math.round(weather[34].main.temp), Math.round(weather[35].main.temp), Math.round(weather[36].main.temp), Math.round(weather[37].main.temp), Math.round(weather[38].main.temp), Math.round(weather[39].main.temp)],
               name: 'Temperature',
               mode: 'lines',
@@ -129,7 +129,7 @@ function Mday() {
               align: 'center',
             },
             trace2= {
-              x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
+              x: Array.from({length: 40}, (_, i) => i + 1),
               y: [Math.round(weather[0].main.feels_like), Math.round(weather[1].main.feels_like), Math.round(weather[2].main.feels_like), Math.round(weather[3].main.feels_like), Math.round(weather[4].main.feels_like), Math.round(weather[5].main.feels_like), Math.round(weather[6].main.feels_like), Math.round(weather[7].main.feels_like), Math.round(weather[8].main.feels_like), Math.round(weather[9].main.feels_like), Math.round(weather[10].main.feels_like), Math.round(weather[11].main.feels_like), Math.round(weather[12].main.feels_like), Math.round(weather[13].main.feels_like), Math.round(weather[14].main.feels_like), Math.round(weather[15].main.feels_like), Math.round(weather[16].main.feels_like), Math.round(weather[17].main.feels_like), Math.round(weather[18].main.feels_like), Math.round(weather[19].main.feels_like), Math.round(weather[20].main.feels_like), Math.round(weather[21].main.feels_like), Math.round(weather[22].main.feels_like), Math.round(weather[23].main.feels_like), Math.round(weather[25].main.feels_like), Math.round(weather[26].main.feels_like), Math.round(weather[27].main.feels_like), Math.round(weather[28].main.feels_like), Math.round(weather[29].main.feels_like), Math.round(weather[30].main.feels_like), Math.round(weather[31].main.feels_like), Math.round(weather[32].main.feels_like), Math.round(weather[33].main.feels_like), Math.round(weather[34].main.feels_like), Math.round(weather[35].main.feels_like), Math.round(weather[36].main.feels_like), Math.round(weather[37].main.feels_like), Math.round(weather[38].main.feels_like), Math.round(weather[39].main.feels_like)],
               name: 'Sensed temperature',
               mode: 'lines',
@@ -157,7 +157,7 @@ function Mday() {
         <div className="pressure-plot"><Plot
           data={[
             trace1= {
-              x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
+              x: Array.from({length: 40}, (_, i) => i + 1),
               y: [weather[0].main.pressure, weather[1].main.pressure, weather[2].main.pressure, weather[3].main.pressure, weather[4].main.pressure, weather[5].main.pressure, weather[6].main.pressure, weather[7].main.pressure, weather[8].main.pressure, weather[9].main.pressure, weather[10].main.pressure, weather[11].main.pressure, weather[12].main.pressure, weather[13].main.pressure, weather[14].main.pressure, weather[15].main.pressure, weather[16].main.pressure, weather[17].main.pressure, weather[18].main.pressure, weather[19].main.pressure, weather[20].main.pressure, weather[21].main.pressure, weather[22].main.pressure, weather[23].main.pressure, weather[24].main.pressure, weather[25].main.pressure, weather[26].main.pressure, weather[27].main.pressure, weather[28].main.pressure, weather[29].main.pressure, weather[30].main.pressure, weather[31].main.pressure, weather[32].main.pressure, weather[33].main.pressure, weather[34].main.pressure, weather[35].main.pressure, weather[36].main.pressure, weather[37].main.pressure, weather[38].main.pressure, weather[39].main.pressure],
               name: 'Pressure',
               mode: 'lines',
