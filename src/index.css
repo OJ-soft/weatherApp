@@ -187,6 +187,18 @@ body {
   align-content: bottom;
   text-align: center;
   background: #ddd;
+  bottom: 0px;
+  width: 100vw;
+}
+
+/*Plot*/
+
+.temperature-plot {
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  align-items: center;
+  align-self: center;
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */

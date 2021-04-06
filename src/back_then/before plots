@@ -18,30 +18,14 @@ const Time = (a) => {
 
   var t1 = h%3
   h = h -t1
-  h = h/3
-  h = 8 - h
-  h = h + a
+
+  h = h + a 
+  if(h > 24){
+    h = h - 24
+    h = "tomorow " + h
+  }
   return h;
 };
-
-const Hour = (a) => {
-  var h = new Date();
-  h = h.getHours();
-
-  var t1 = h%3
-  h = h -t1
-  h = h + a
-  return h;
-};
-
-const Day = (a) => {
-  var d = new Date()
-  d = d.getDay()
-
-  var week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-
-  return week[d+a]
-}
 
 
 var weatherplot = []
@@ -118,7 +102,7 @@ function Mday() {
           <div className="date"> {dateBuild(0)}</div>
         </div>
 
-        <div className="temperature-plot"><Plot
+        <div className="temperature-polt"><Plot
           data={[
             trace1= {
               x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
@@ -142,8 +126,6 @@ function Mday() {
             height: 400,
             plot_bgcolor: '#e3e3e3',
             showlegend: true,
-            xaxis: {tickvals:[Time(0), Time(8), Time(16), Time(24), Time(32), Time(40)], ticktext:[Day(0), Day(1), Day(2), Day(3), Day(4)]},
-            yaxis: {tickvals:[-5, 0, 5, 10], ticktext:['-5°C', '0°C', '5°C', '10°C']},
             legend: {
               x: 1,
               y: 0,
@@ -154,34 +136,42 @@ function Mday() {
           config={{displayModeBar: false}}
         /></div>
 
-        <div className="pressure-plot"><Plot
-          data={[
-            trace1= {
-              x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
-              y: [weather[0].main.pressure, weather[1].main.pressure, weather[2].main.pressure, weather[3].main.pressure, weather[4].main.pressure, weather[5].main.pressure, weather[6].main.pressure, weather[7].main.pressure, weather[8].main.pressure, weather[9].main.pressure, weather[10].main.pressure, weather[11].main.pressure, weather[12].main.pressure, weather[13].main.pressure, weather[14].main.pressure, weather[15].main.pressure, weather[16].main.pressure, weather[17].main.pressure, weather[18].main.pressure, weather[19].main.pressure, weather[20].main.pressure, weather[21].main.pressure, weather[22].main.pressure, weather[23].main.pressure, weather[24].main.pressure, weather[25].main.pressure, weather[26].main.pressure, weather[27].main.pressure, weather[28].main.pressure, weather[29].main.pressure, weather[30].main.pressure, weather[31].main.pressure, weather[32].main.pressure, weather[33].main.pressure, weather[34].main.pressure, weather[35].main.pressure, weather[36].main.pressure, weather[37].main.pressure, weather[38].main.pressure, weather[39].main.pressure],
-              name: 'Pressure',
-              mode: 'lines',
-              marker: {color: 'red'},
-              align: 'center',
-            }
-          ]}
-          layout={{
-            width: 1200,
-            height: 400,
-            plot_bgcolor: '#e3e3e3',
-            showlegend: true,
-            xaxis: {tickvals:[Time(0), Time(8), Time(16), Time(24), Time(32), Time(40)], ticktext:[Day(0), Day(1), Day(2), Day(3), Day(4)]},
-            //yaxis: {tickvals:[-5, 0, 5, 10], ticktext:['-5°C', '0°C', '5°C', '10°C']},
-            legend: {
-              x: 1,
-              y: 0,
-              xanchor: 'right',
-              bgcolor: '#e3e3e3',
-            }
-          }}
-          config={{displayModeBar: false}}
-        /></div>
+        <div class="container-flex">
+          <div className="weather-container">
+            <div className="temperature">
+              {Math.round(weather[0].main.temp)}°C
+            </div>
+            <div className="weather">{weather[0].weather[0].main}</div>
+          </div>
+            
+          <div className="weather-container">
+            <div className="temperature">
+              {Math.round(weather[1].main.temp)}°C
+            </div>
+            <div className="weather">{weather[1].weather[0].main}</div>
+          </div>
+            
+          <div className="weather-container">
+            <div className="temperature">
+              {Math.round(weather[2].main.temp)}°C
+            </div>
+            <div className="weather">{weather[2].weather[0].main}</div>
+          </div>
+   
+          <div className="weather-container">
+            <div className="temperature">
+              {Math.round(weather[3].main.temp)}°C
+            </div>
+            <div className="weather">{weather[3].weather[0].main}</div>
+          </div>
 
+          <div className="weather-container">
+            <div className="temperature">
+              {Math.round(weather[4].main.temp)}°C
+            </div>
+            <div className="weather">{weather[4].weather[0].main}</div>
+          </div>
+        </div>
       </div> 
         ) : (
           ""

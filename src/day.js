@@ -8,14 +8,24 @@ const api = {
   base: keys.BASE_URL,
 };
 
-function Mday() {
+const Time = (a) => {
+  var h = new Date();
+  h = h.getHours();
+
+  var t1 = h%3
+  h = h -t1
+
+  h = h + a 
+  if(h > 24){
+    h = h - 24
+    h = "tomorow " + h
+  }
+  return h;
+};
+
+function Day() {
   const dateBuild = (d) => {
-    var today = new Date();
-    var movedDate = new Date();
-    movedDate.setDate(today.getDate + (d))
-    console.log(movedDate)
-    let date = String(movedDate);
-    console.log(date)
+    let date = String(new window.Date());
     date = date.slice(3, 15);
     return date;
   };
@@ -52,6 +62,8 @@ function Mday() {
         </div>
       </top>
 
+      <p id="demo"></p>
+
       <navbar>
         <ul class="navbar">
           <li><Link to="/Landing">Home</Link></li>
@@ -85,7 +97,7 @@ function Mday() {
             
             <div className="weather-container">
               <div className="temperature">
-              <h5>In 3 hours</h5>
+              <h5>{Time(3)}.00</h5>
                 {Math.round(weather[1].main.temp)}°C
               </div>
               <div className="weather">{weather[1].weather[0].main}</div>
@@ -93,7 +105,7 @@ function Mday() {
 
             <div className="weather-container">
               <div className="temperature">
-              <h5>In 6 hours</h5>
+              <h5>{Time(6)}.00</h5>
                 {Math.round(weather[2].main.temp)}°C
               </div>
               <div className="weather">{weather[2].weather[0].main}</div>
@@ -101,7 +113,7 @@ function Mday() {
 
             <div className="weather-container">
               <div className="temperature">
-              <h5>In 9 hours</h5>
+              <h5>{Time(9)}.00</h5>
                 {Math.round(weather[3].main.temp)}°C
               </div>
               <div className="weather">{weather[3].weather[0].main}</div>
@@ -109,7 +121,7 @@ function Mday() {
 
             <div className="weather-container">
               <div className="temperature">
-              <h5>In 12 hours</h5>
+              <h5>{Time(12)}.00</h5>
                 {Math.round(weather[4].main.temp)}°C
               </div>
               <div className="weather">{weather[4].weather[0].main}</div>
@@ -117,7 +129,7 @@ function Mday() {
 
             <div className="weather-container">
               <div className="temperature">
-              <h5>In 15 hours</h5>
+              <h5>{Time(15)}.00</h5>
                 {Math.round(weather[5].main.temp)}°C
               </div>
               <div className="weather">{weather[5].weather[0].main}</div>
@@ -125,7 +137,7 @@ function Mday() {
 
             <div className="weather-container">
               <div className="temperature">
-              <h5>In 18 hours</h5>
+              <h5>{Time(18)}.00</h5>
                 {Math.round(weather[6].main.temp)}°C
               </div>
               <div className="weather">{weather[6].weather[0].main}</div>
@@ -133,7 +145,7 @@ function Mday() {
 
             <div className="weather-container">
               <div className="temperature">
-              <h5>In 21 hours</h5>
+              <h5>{Time(21)}.00</h5>
                 {Math.round(weather[7].main.temp)}°C
               </div>
               <div className="weather">{weather[7].weather[0].main}</div>
@@ -141,7 +153,7 @@ function Mday() {
 
             <div className="weather-container">
               <div className="temperature">
-              <h5>In 24 hours</h5>
+              <h5>{Time(24)}.00</h5>
                 {Math.round(weather[8].main.temp)}°C
               </div>
               <div className="weather">{weather[8].weather[0].main}</div>
@@ -156,4 +168,4 @@ function Mday() {
   );
 }
 
-export default Mday;
+export default Day;
