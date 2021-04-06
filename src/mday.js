@@ -143,13 +143,13 @@ function Mday() {
             plot_bgcolor: '#e3e3e3',
             showlegend: true,
             xaxis: {tickvals:[Time(0), Time(8), Time(16), Time(24), Time(32), Time(40)], ticktext:[Day(0), Day(1), Day(2), Day(3), Day(4)]},
-            yaxis: {tickvals:[-5, 0, 5, 10], ticktext:['-5°C', '0°C', '5°C', '10°C']},
+            yaxis: {tickvals:[-20, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35], ticktext:['-20°C','-10°C','-5°C', '0°C', '5°C', '10°C', '15°C', '20°C', '25°C', '30°C', '35°C']},
             legend: {
               x: 1,
               y: 0,
               xanchor: 'right',
               bgcolor: '#e3e3e3',
-            }
+            },
           }}
           config={{displayModeBar: false}}
         /></div>
@@ -167,17 +167,45 @@ function Mday() {
           ]}
           layout={{
             width: 1200,
-            height: 400,
+            height: 300,
             plot_bgcolor: '#e3e3e3',
             showlegend: true,
             xaxis: {tickvals:[Time(0), Time(8), Time(16), Time(24), Time(32), Time(40)], ticktext:[Day(0), Day(1), Day(2), Day(3), Day(4)]},
-            //yaxis: {tickvals:[-5, 0, 5, 10], ticktext:['-5°C', '0°C', '5°C', '10°C']},
             legend: {
               x: 1,
               y: 0,
               xanchor: 'right',
               bgcolor: '#e3e3e3',
+            },
+            margin: {t:20}
+          }}
+          config={{displayModeBar: false}}
+        /></div>
+
+        <div className="rain-plot"><Plot
+          data={[
+            trace1= {
+              x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
+              y: [weather[0].pop, weather[1].main.pop, weather[2].main.pop, weather[3].pop, weather[4].pop, weather[5].pop, weather[6].pop, weather[7].pop, weather[8].pop, weather[9].pop, weather[10].pop, weather[11].pop, weather[12].pop, weather[13].pop, weather[14].pop, weather[15].pop, weather[16].pop, weather[17].pop, weather[18].pop, weather[19].pop, weather[20].pop, weather[21].pop, weather[22].pop, weather[23].pop, weather[24].pop, weather[25].pop, weather[26].pop, weather[27].pop, weather[28].pop, weather[29].pop, weather[30].pop, weather[31].pop, weather[32].pop, weather[33].pop, weather[34].pop, weather[35].pop, weather[36].pop, weather[37].pop, weather[38].pop, weather[39].pop],
+              name: 'Probability of rain',
+              mode: 'lines',
+              marker: {color: 'red'},
+              align: 'center',
             }
+          ]}
+          layout={{
+            width: 1200,
+            height: 300,
+            plot_bgcolor: '#e3e3e3',
+            showlegend: true,
+            xaxis: {tickvals:[Time(0), Time(8), Time(16), Time(24), Time(32), Time(40)], ticktext:[Day(0), Day(1), Day(2), Day(3), Day(4)]},
+            legend: {
+              x: 1,
+              y: 0,
+              xanchor: 'right',
+              bgcolor: '#e3e3e3',
+            },
+            margin: {t:20}
           }}
           config={{displayModeBar: false}}
         /></div>

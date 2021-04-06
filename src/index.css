@@ -16,57 +16,56 @@ body {
 /*landing*/
 
 .landing h4 {
-    text-align: center;
-    color: white;
-    padding-top: 50vh;
-    background-image: url("./pics/sat1.jpg");
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    font-weight: 500;
-    font-size: 50px;
-    text-shadow: 2px 2px black;
+  text-align: center;
+  color: white;
+  padding-top: 50vh;
+  background-image: url("./pics/sat1.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  font-weight: 500;
+  font-size: 50px;
+  text-shadow: 2px 2px black;
 }
 
 /*top*/
 
 .top-content {
-    height: 10vh;
-    width: 100%;
+  height: 10vh;
+  width: 100%;
 }
 
 .top-content {
-    background-image: url("./pics/sat1.jpg");
-    background-position: center;
-    background-size: cover;
+  background-image: url("./pics/sat1.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
-
 .top-content {
-    width: 100%;
-    height: 100%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .top-text {
-    text-align: center;
-    margin-top: 20vh;
+  text-align: center;
+  margin-top: 20vh;
 }
 
 .top-text h1 {
-    font-weight: 500;
-    font-size: 50px;
-    text-shadow: 2px 2px black;
+  font-weight: 500;
+  font-size: 50px;
+  text-shadow: 2px 2px black;
 }
 
 .top-text h2 {
-    font-weight: 50;
-    font-size: 15px;
-    text-shadow: 2px 2px black;
+  font-weight: 50;
+  font-size: 15px;
+  text-shadow: 2px 2px black;
 }
 
 /*navbar*/
@@ -119,7 +118,7 @@ body {
 }
 
 .location-container {
-  color:#4d4d4d;
+  color: #4d4d4d;
   font-size: 30px;
   text-align: center;
   /*text-shadow: 3px 3px rgba(58, 53, 53, 0.73);*/
@@ -161,7 +160,7 @@ body {
   height: 140px;
   width: 250px;
   color: #4d4d4d;
-  background: #e3e3e3 ;
+  background: #e3e3e3;
   position: relative;
   display: inline-block;
   margin: 30px auto;
@@ -194,16 +193,24 @@ body {
 /*Plot*/
 
 .temperature-plot {
+  display: flex;
   justify-content: center;
-  justify-self: center;
-  justify-items: center;
   align-items: center;
-  align-self: center;
+}
+.pressure-plot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rain-plot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
-  .row {   
+  .row {
     flex-direction: column;
   }
 }
