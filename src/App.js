@@ -26,7 +26,8 @@ function App() {
       </Switch>
       
       <div class="footer">
-        <h3>Literally <b>PERFECT</b> website</h3>
+        <h3>Literally PERFECT website</h3>
+        <h6>Copyright 2021 OJsoft</h6>
       </div>
     </body>
   </Router>

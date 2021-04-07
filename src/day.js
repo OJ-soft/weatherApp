@@ -34,7 +34,7 @@ function Day() {
   const [metadata, setMetadata] = useState("");
   const [weather, setWeather] = useState([]);
   const search = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && query !== "") {
       fetch(`${api.base}forecast?q=${query}&units=metric&APPID=${api.key}`)
         .then((res) => res.json())
         .then((result) => {
@@ -57,12 +57,12 @@ function Day() {
   };
 
   return (
-    <div>
+    <div class = "content">
       <main>
         <top>
           <div class="top-content">
             <div class="top-text">
-              <h1>WeatherWebApp</h1>
+              <h1>WeatherApp</h1>
               <h2>
                 made by <b>Mikołaj</b> and <b>Olek</b>
                 <p>&nbsp;</p>{" "}

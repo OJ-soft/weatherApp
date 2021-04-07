@@ -38,11 +38,10 @@ const Day = (a) => {
   var d = new Date()
   d = d.getDay()
 
-  var week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  var week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
   return week[d+a]
 }
-
 
 var weatherplot = []
 var trace1
@@ -59,26 +58,28 @@ function Mday() {
   const [metadata, setMetadata] = useState("");
   const [weather, setWeather] = useState([]);
   const search = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && query !== "") {
       fetch(`${api.base}forecast?q=${query}&units=metric&APPID=${api.key}`)
         .then((res) => res.json())
         .then((result) => {
-          setQuery("");
-          setMetadata(result)
-          setWeather([result.list[0], result.list[1], result.list[2], result.list[3], result.list[4], result.list[5], result.list[6], result.list[7], result.list[8], result.list[9], result.list[10], result.list[11], result.list[12], result.list[13], result.list[14], result.list[15], result.list[16], result.list[17], result.list[18], result.list[19], result.list[20], result.list[21], result.list[22], result.list[23], result.list[24], result.list[25], result.list[26], result.list[27], result.list[28], result.list[29], result.list[30], result.list[31], result.list[32], result.list[33], result.list[34], result.list[35], result.list[36], result.list[37], result.list[38], result.list[39]]);
-          console.log(result);
+          if (result.status !== 200){
+            setQuery("");
+            setMetadata(result)
+            setWeather([result.list[0], result.list[1], result.list[2], result.list[3], result.list[4], result.list[5], result.list[6], result.list[7], result.list[8], result.list[9], result.list[10], result.list[11], result.list[12], result.list[13], result.list[14], result.list[15], result.list[16], result.list[17], result.list[18], result.list[19], result.list[20], result.list[21], result.list[22], result.list[23], result.list[24], result.list[25], result.list[26], result.list[27], result.list[28], result.list[29], result.list[30], result.list[31], result.list[32], result.list[33], result.list[34], result.list[35], result.list[36], result.list[37], result.list[38], result.list[39]]);
+            console.log(result);
+          };
         });
     }
   };
 
   return (
-    <div>
+    <div class="content">
       <main>
 
       <top>
         <div class="top-content">
           <div class="top-text">
-            <h1>WeatherWebApp</h1>
+            <h1>WeatherApp</h1>
             <h2>made by <b>Mikołaj</b> and <b>Olek</b><p>&nbsp;</p> </h2>
           </div>
           <div class="contentDiv">
@@ -185,7 +186,7 @@ function Mday() {
         <div className="rain-plot"><Plot
           data={[
             trace1= {
-              x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
+              x: Array.from({length: 40}, (_, i) => i + 1),
               y: [weather[0].pop, weather[1].main.pop, weather[2].main.pop, weather[3].pop, weather[4].pop, weather[5].pop, weather[6].pop, weather[7].pop, weather[8].pop, weather[9].pop, weather[10].pop, weather[11].pop, weather[12].pop, weather[13].pop, weather[14].pop, weather[15].pop, weather[16].pop, weather[17].pop, weather[18].pop, weather[19].pop, weather[20].pop, weather[21].pop, weather[22].pop, weather[23].pop, weather[24].pop, weather[25].pop, weather[26].pop, weather[27].pop, weather[28].pop, weather[29].pop, weather[30].pop, weather[31].pop, weather[32].pop, weather[33].pop, weather[34].pop, weather[35].pop, weather[36].pop, weather[37].pop, weather[38].pop, weather[39].pop],
               name: 'Probability of rain',
               mode: 'lines',
