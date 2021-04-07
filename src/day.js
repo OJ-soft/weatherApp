@@ -68,14 +68,9 @@ function Day() {
                 <p>&nbsp;</p>{" "}
               </h2>
             </div>
-            <div class="contentDiv">
-              {/*<img class="arrow" url="./pics/arrow.jpg"/>*/}
-            </div>
           </div>
         </top>
-
-        <p id="demo"></p>
-
+        
         <navbar>
           <ul class="navbar">
             <li>
