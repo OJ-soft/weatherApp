@@ -107,7 +107,7 @@ function Mday() {
         />
       </div>
 
-      {weather.length !== 0 ? (
+      {weather.length !== 0 && typeof weather.main != "undefined"? (
         <div>
         <div className="location-container">
           <div className="location">
