@@ -40,27 +40,37 @@ function Now() {
       }
     >
       <main>
-
-      <top>
-        <div class="top-content">
-          <div class="top-text">
-            <h1>WeatherWebApp</h1>
-            <h2>made by <b>Mikołaj</b> and <b>Olek</b><p>&nbsp;</p> </h2>
+        <top>
+          <div class="top-content">
+            <div class="top-text">
+              <h1>WeatherWebApp</h1>
+              <h2>
+                made by <b>Mikołaj</b> and <b>Olek</b>
+                <p>&nbsp;</p>{" "}
+              </h2>
+            </div>
+            <div class="contentDiv">
+              {/*<img class="arrow" url="./pics/arrow.jpg"/>*/}
+            </div>
           </div>
-          <div class="contentDiv">
-            {/*<img class="arrow" url="./pics/arrow.jpg"/>*/}
-          </div>
-        </div>
-      </top>
+        </top>
 
-      <navbar>
-        <ul class="navbar">
-          <li><Link to="/Landing">Home</Link></li>
-          <li><Link to="/Now">Now</Link></li>
-          <li><Link to="/day">24 hours</Link></li>
-          <li><Link to="/mday">5 day</Link></li>
-        </ul>
-      </navbar>
+        <navbar>
+          <ul class="navbar">
+            <li>
+              <Link to="/Landing">Home</Link>
+            </li>
+            <li>
+              <Link to="/Now">Now</Link>
+            </li>
+            <li>
+              <Link to="/day">24 hours</Link>
+            </li>
+            <li>
+              <Link to="/mday">5 day</Link>
+            </li>
+          </ul>
+        </navbar>
 
         <div className="search-container">
           <br></br>

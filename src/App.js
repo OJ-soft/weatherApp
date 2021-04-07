@@ -3,10 +3,10 @@ import keys from "./keys";
 
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
-import Day from "./day"
-import Now from "./Now"
-import Mday from "./mday"
-import Landing from "./Landing"
+import Day from "./day";
+import Now from "./Now";
+import Mday from "./mday";
+import Landing from "./Landing";
 
 const api = {
   key: keys.API_KEY,
@@ -17,7 +17,6 @@ function App() {
   return (
     <Router>
       <body>
-      
       <Switch>
         <Route exact path="/" component={Landing}/>
         <Route path="/Landing" component={Landing}/>
