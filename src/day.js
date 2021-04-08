@@ -100,7 +100,7 @@ function Day() {
             onKeyPress={search}
           />
         </div>
-        {weather.length !== 0 && typeof weather.main != "undefined" ? (
+        {weather.length !== 0 ? (
           <div>
             <div className="location-container">
               <div className="location">
