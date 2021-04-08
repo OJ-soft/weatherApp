@@ -101,7 +101,6 @@ function Day() {
             onChange={(e) => setQuery(e.target.value)}
             value={query}
             onKeyPress={search}
-
           />
         </div>
         {weather.length !== 0 ? (
