@@ -150,10 +150,11 @@ function Mday() {
               xanchor: 'right',
               bgcolor: '#e3e3e3',
             },
+            margin: {t:20},
           }}
           style={{
             width: '100%',
-            height: '100%',
+            height: '350px',
           }}
           config={{
             displayModeBar: false,
@@ -187,7 +188,7 @@ function Mday() {
           }}
           style={{
             width: '100%',
-            height: '100%',
+            height: '350px',
           }}
           config={{
             displayModeBar: false,
@@ -221,7 +222,7 @@ function Mday() {
           }}
           style={{
             width: '100%',
-            height: '100%',
+            height: '350px',
           }}
           config={{
             displayModeBar: false,
