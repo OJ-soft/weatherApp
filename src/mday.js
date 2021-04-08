@@ -139,7 +139,7 @@ function Mday() {
             },
           ]}
           layout={{
-            autosize: false,
+            autosize: true,
             plot_bgcolor: '#e3e3e3',
             showlegend: true,
             xaxis: {tickvals:[Time(0), Time(8), Time(16), Time(24), Time(32), Time(40)], ticktext:[Day(0), Day(1), Day(2), Day(3), Day(4)]},
@@ -150,6 +150,10 @@ function Mday() {
               xanchor: 'right',
               bgcolor: '#e3e3e3',
             },
+          }}
+          style={{
+            width: '100%',
+            height: '100%',
           }}
           config={{
             displayModeBar: false,
@@ -169,8 +173,7 @@ function Mday() {
             }
           ]}
           layout={{
-            width: 1200,
-            height: 300,
+            autosize: true,
             plot_bgcolor: '#e3e3e3',
             showlegend: true,
             xaxis: {tickvals:[Time(0), Time(8), Time(16), Time(24), Time(32), Time(40)], ticktext:[Day(0), Day(1), Day(2), Day(3), Day(4)]},
@@ -182,7 +185,14 @@ function Mday() {
             },
             margin: {t:20}
           }}
-          config={{displayModeBar: false}}
+          style={{
+            width: '100%',
+            height: '100%',
+          }}
+          config={{
+            displayModeBar: false,
+            responsive: true,
+          }}
         /></div>
 
         <div className="rain-plot"><Plot
@@ -197,8 +207,7 @@ function Mday() {
             }
           ]}
           layout={{
-            width: 1200,
-            height: 300,
+            autosize: true,
             plot_bgcolor: '#e3e3e3',
             showlegend: true,
             xaxis: {tickvals:[Time(0), Time(8), Time(16), Time(24), Time(32), Time(40)], ticktext:[Day(0), Day(1), Day(2), Day(3), Day(4)]},
@@ -210,7 +219,14 @@ function Mday() {
             },
             margin: {t:20}
           }}
-          config={{displayModeBar: false}}
+          style={{
+            width: '100%',
+            height: '100%',
+          }}
+          config={{
+            displayModeBar: false,
+            responsive: true,
+          }}
         /></div>
 
       </div> 

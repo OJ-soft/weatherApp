@@ -36,11 +36,6 @@ body {
 /*top*/
 
 .top-content {
-  height: 10vh;
-  width: 100%;
-}
-
-.top-content {
   background-image: url("./pics/sat1.jpg");
   background-position: center;
   background-size: cover;
