@@ -9,6 +9,10 @@ body {
   margin: 0;
 }
 
+.content {
+  min-height: 100vh;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -25,7 +29,7 @@ body {
   height: 100vh;
   width: 100%;
   font-weight: 500;
-  font-size: 50px;
+  font-size: 7vh;
   text-shadow: 2px 2px black;
 }
 
@@ -54,6 +58,7 @@ body {
 .top-text {
   text-align: center;
   margin-top: 20vh;
+  margin-bottom: 10%;
 }
 
 .top-text h1 {
@@ -78,10 +83,10 @@ body {
   overflow: hidden;
   background-color: #333333;
   position: sticky;
-  position: -webkit-sticky;
   top: 0;
-  justify-content: space-around;
+  justify-content: space-evenly;
   z-index: 5;
+  width: 100vw;
 }
 
 .navbar a {
@@ -89,7 +94,7 @@ body {
   display: block;
   color: white;
   text-align: center;
-  padding: 15px 40px;
+  padding: 15px 5vw;
   text-decoration: none;
   border-radius: 10px;
 }
@@ -118,6 +123,7 @@ body {
 }
 
 .location-container {
+  margin-top: 12px;
   color: #4d4d4d;
   font-size: 30px;
   text-align: center;
@@ -190,13 +196,19 @@ body {
   width: 100vw;
 }
 
+.footer h6 {
+  padding: 5px;
+}
+
 /*Plot*/
 
 .temperature-plot {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
 }
+
 .pressure-plot {
   display: flex;
   justify-content: center;
@@ -222,22 +234,3 @@ body {
     width: 100%;
   }
 }
-
-/*arrow*/
-/*
-@keyframes bouncing {
-  0% {bottom: 0;}
-  50% {bottom: 50px;}
-  100% {bottom: 0;}
-}
-
-.arrow {
-  animation: bouncing 1.5s infinite ease-in-out;
-  bottom: 0;
-  display: block;
-  height: 30px;
-  left: 50%;
-  position: absolute;
-  width: 30px;
-}
-*/

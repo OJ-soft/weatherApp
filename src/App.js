@@ -13,25 +13,25 @@ const api = {
   base: keys.BASE_URL,
 };
 
+
 function App() {
   return (
     <Router>
       <body>
-        <Switch>
-          <Route exact path="/" component={Landing} />
-          <Route path="/landing" component={Landing} />
-          <Route path="/day" component={Day} />
-          <Route path="/Now" component={Now} />
-          <Route path="/mday" component={Mday} />
-        </Switch>
-
-        <div class="footer">
-          <h3>
-            Literaly <b>PERFECT</b> website
-          </h3>
-        </div>
-      </body>
-    </Router>
+      <Switch>
+        <Route exact path="/" component={Landing}/>
+        <Route path="/Landing" component={Landing}/>
+        <Route path="/day" component={Day} />
+        <Route path="/Now" component={Now} />
+        <Route path="/mday" component={Mday} />
+      </Switch>
+      
+      <div class="footer">
+        <h3>Literally PERFECT website</h3>
+        <h6>Copyright 2021 OJsoft</h6>
+      </div>
+    </body>
+  </Router>
   );
 }
 

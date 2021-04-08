@@ -30,27 +30,16 @@ function Now() {
   };
 
   return (
-    <div
-      className={
-        typeof weather.main != "undefined"
-          ? weather.main.temp > 18
-            ? "App hot"
-            : "App cold"
-          : "App"
-      }
-    >
+    <div class="content">
       <main>
         <top>
           <div class="top-content">
             <div class="top-text">
-              <h1>WeatherWebApp</h1>
+              <h1>WeatherApp</h1>
               <h2>
                 made by <b>Mikołaj</b> and <b>Olek</b>
                 <p>&nbsp;</p>{" "}
               </h2>
-            </div>
-            <div class="contentDiv">
-              {/*<img class="arrow" url="./pics/arrow.jpg"/>*/}
             </div>
           </div>
         </top>
