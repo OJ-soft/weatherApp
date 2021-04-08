@@ -52,7 +52,8 @@ function Day() {
             result.list[8],
           ]);
           console.log(result);
-        });
+        })
+        .catch(e => console.error(e));
     }
   };
 
@@ -98,6 +99,7 @@ function Day() {
             onChange={(e) => setQuery(e.target.value)}
             value={query}
             onKeyPress={search}
+            setWeather={[]}
           />
         </div>
         {weather.length !== 0 ? (
